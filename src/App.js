@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import "./App.css";
+import "./styles/Global.css";
+
+import Navigation from "./sections/Navigation";
+import MenuNav from "./sections/MenuNav";
+import Iframe from "./sections/Iframe";
+import EditorChoice from "./sections/EditorChoice";
+import MyMatches from "./sections/MyMatches";
+import LatestArticles from "./sections/LatestArticles";
+import LatestReviews from "./sections/LatestReviews";
+import PopularGroups from "./sections/PopularGroups";
+import LatestVideos from "./sections/LatestVideos";
+import TrendingThisWeek from "./sections/TrendingThisWeek";
+import TopBrands from "./sections/TopBrands";
+import Footer from "./sections/Footer";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+      <MenuNav />
+      <Iframe />
+      <EditorChoice />
+      <MyMatches />
+      <Iframe />
+      <LatestArticles />
+      <LatestReviews />
+      <Iframe />
+      <PopularGroups />
+      <LatestVideos />
+      <TrendingThisWeek />
+      <TopBrands />
+      <Footer />
+      <Iframe />
     </div>
   );
 }
