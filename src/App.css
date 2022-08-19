@@ -1,0 +1,24 @@
+*{
+  text-align: center;
+  font-family: 'NTR', sans-serif;
+}
+
+#content{
+  min-width: 1440px;
+}
+
+#fd-logo{
+  width: 153px;
+}
+
+p{
+  color: var(--spanish-gray);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: var(--chinese-black) !important;
+}
