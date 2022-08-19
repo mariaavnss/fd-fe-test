@@ -32,12 +32,16 @@ const Wrapper = styled.div`
   display: flex;
   gap: 30px;
   align-items: center;
-`
+`;
 
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--chinese-silver);
+  background-color: var(--white);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
 `;
 
 function Navigation() {
@@ -55,13 +59,10 @@ function Navigation() {
           <p>{"Search products, articles, topics, brands, etc"}</p>
         </SearchBar>
       </Wrapper>
-      <Button 
-        onClick={() => window.open("https://account.femaledaily.com/")}
-      >
-        <img src={"/assets/user-icon.png"} alt="User Login Icon"/>
+      <Button onClick={() => window.open("https://account.femaledaily.com/")}>
+        <img src={"/assets/user-icon.png"} alt="User Login Icon" />
         {"LOGIN / SIGNUP"}
       </Button>
-      
     </Container>
   );
 }
