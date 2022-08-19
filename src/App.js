@@ -19,21 +19,24 @@ import Footer from "./sections/Footer";
 function App() {
   return (
     <div className="App">
-      <Navigation />
-      <MenuNav />
-      <Iframe />
-      <EditorChoice />
-      <MyMatches />
-      <Iframe />
-      <LatestArticles />
-      <LatestReviews />
-      <Iframe />
-      <PopularGroups />
-      <LatestVideos />
-      <TrendingThisWeek />
-      <TopBrands />
-      <Footer />
-      <Iframe />
+      <div id="content">
+
+        <Navigation />
+        {/* <MenuNav />
+        <Iframe />
+        <EditorChoice />
+        <MyMatches />
+        <Iframe />
+        <LatestArticles />
+        <LatestReviews />
+        <Iframe />
+        <PopularGroups />
+        <LatestVideos />
+        <TrendingThisWeek />
+        <TopBrands />
+        <Footer />
+        <Iframe /> */}
+      </div>
     </div>
   );
 }
