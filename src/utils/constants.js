@@ -1,0 +1,1 @@
+export const HOST_FD_STUDIO = 'https://studio.femaledaily.com/';

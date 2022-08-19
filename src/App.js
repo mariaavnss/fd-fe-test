@@ -20,9 +20,8 @@ function App() {
   return (
     <div className="App">
       <div id="content">
-
         <Navigation />
-        {/* <MenuNav />
+        <MenuNav />
         <Iframe />
         <EditorChoice />
         <MyMatches />
@@ -35,7 +34,7 @@ function App() {
         <TrendingThisWeek />
         <TopBrands />
         <Footer />
-        <Iframe /> */}
+        <Iframe />
       </div>
     </div>
   );
