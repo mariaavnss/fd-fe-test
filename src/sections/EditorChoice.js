@@ -1,7 +1,5 @@
 import React from "react";
 
-import { FD_EDITORIAL } from "../utils/constants";
-
 import SectionHeader from "../components/SectionHeader";
 
 function EditorChoice() {
@@ -9,8 +7,7 @@ function EditorChoice() {
     <SectionHeader
       title={"Editor's Choice"}
       subtitle={"Curated with love"}
-      seeMore={true}
-      url={FD_EDITORIAL}
+      seeMore={false}
     />
 
   </React.Fragment>;
