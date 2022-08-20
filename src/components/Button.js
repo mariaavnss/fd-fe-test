@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Styled from "styled-components";
+import styled from "styled-components";
 
-const Wrapper = Styled.a`
+const Wrapper = styled.a`
   cursor: pointer;
   color: var(--white);
   background-color: var(--amaranth);

@@ -22,19 +22,20 @@ function App() {
       <div id="content">
         <Navigation />
         <MenuNav />
-        <Iframe />
+        <Iframe adsIndex="Top Frame"/>
+        <Iframe adsIndex="Billboard"/>
         <EditorChoice />
         <MyMatches />
-        <Iframe />
+        <Iframe adsIndex="Horizontal"/>
         <LatestArticles />
         <LatestReviews />
-        <Iframe />
+        <Iframe adsIndex="MR 2"/>
         <PopularGroups />
         <LatestVideos />
         <TrendingThisWeek />
         <TopBrands />
         <Footer />
-        <Iframe />
+        <Iframe adsIndex="Bottom Frame"/>
       </div>
     </div>
   );
