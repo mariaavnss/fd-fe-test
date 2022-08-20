@@ -19,12 +19,20 @@ const SearchBar = styled.div`
   width: 945px;
   height: 39px;
   border: 1px solid var(--chinese-silver);
-
   display: flex;
   gap: 10px;
   line-height: 22px;
   font-size: 22px;
   padding: 10px;
+  display: flex;
+  align-items: center;
+`;
+
+const Copy = styled.div`
+  margin: 20px 30px;
+  display: flex;
+  gap: 5px;
+  min-width: 164px;
 `;
 
 const Wrapper = styled.div`
@@ -60,8 +68,10 @@ function Navigation() {
         </SearchBar>
       </Wrapper>
       <Button onClick={() => window.open("https://account.femaledaily.com/")}>
-        <img src={"/assets/user-icon.png"} alt="User Login Icon" />
-        {"LOGIN / SIGNUP"}
+        <Copy>
+          <img src={"/assets/user-icon.png"} alt="User Login Icon" />
+          {"LOGIN / SIGNUP"}
+        </Copy>
       </Button>
     </Container>
   );

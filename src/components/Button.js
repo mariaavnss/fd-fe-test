@@ -4,11 +4,15 @@ import Styled from "styled-components";
 
 const Wrapper = Styled.a`
   cursor: pointer;
-  padding: 20px 30px;
   color: var(--white);
   background-color: var(--amaranth);
   width: ${(props) => props.width + "px"};
   height: ${(props) => props.height + "px"}
+  margin: 0 auto;
+  letter-spacing:0px;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
 
   &:hover {
     color: var(--chinese-black);

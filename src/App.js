@@ -5,7 +5,7 @@ import "./styles/Global.css";
 
 import Navigation from "./sections/Navigation";
 import MenuNav from "./sections/MenuNav";
-import Iframe from "./sections/Iframe";
+import Iframe from "./components/Iframe";
 import EditorChoice from "./sections/EditorChoice";
 import MyMatches from "./sections/MyMatches";
 import LatestArticles from "./sections/LatestArticles";
