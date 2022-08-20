@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Menu } from "@styled-icons/boxicons-regular/Menu";
 import { Search } from "@styled-icons/bootstrap/Search";
 
-import { HOST } from "../utils/constants";
+import { HOST, FD_LOGIN_PAGE } from "../utils/constants";
 
 import Button from "../components/Button";
 
@@ -34,7 +34,7 @@ const SearchBar = styled.div`
 `;
 
 const Copy = styled.div`
-  margin: 20px 30px;
+  margin: 0 13px;
   display: flex;
   gap: 5px;
   min-width: 164px;
@@ -73,7 +73,9 @@ function Navigation() {
           <p>{"Search products, articles, topics, brands, etc"}</p>
         </SearchBar>
       </Wrapper>
-      <Button onClick={() => window.open("https://account.femaledaily.com/")}>
+      <Button
+        onClick={() => window.open(FD_LOGIN_PAGE, "_self")}
+      >
         <Copy>
           <img src={"/assets/user-icon.png"} alt="User Login Icon" />
           {"LOGIN / SIGNUP"}

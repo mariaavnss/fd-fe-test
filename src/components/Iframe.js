@@ -6,9 +6,9 @@ const Container = styled.div`
   margin: 0 auto;
   background-color: var(--chinese-silver);
   border: 1px solid var(--spanish-gray);
-  width: ${(props) => (props.adsIndex == "MR 2" ? "300px" : "970px")};
+  width: ${(props) => (props.adsIndex === "MR 2" ? "300px" : "970px")};
   height: ${(props) =>
-    props.adsIndex == "Top Frame" || props.adsIndex == "Bottom Frame"
+    props.adsIndex === "Top Frame" || props.adsIndex === "Bottom Frame"
       ? "50px"
       : "250px"};
   display: flex;
