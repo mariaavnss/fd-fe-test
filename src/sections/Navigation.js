@@ -1,8 +1,9 @@
 import React from "react";
-
 import styled from "styled-components";
 import { Menu } from "@styled-icons/boxicons-regular/Menu";
 import { Search } from "@styled-icons/bootstrap/Search";
+
+import { HOST } from "../utils/constants";
 
 import Button from "../components/Button";
 
@@ -13,6 +14,10 @@ const BurgerMenu = styled(Menu)`
 const SearchIcon = styled(Search)`
   width: 30px;
   color: var(--spanish-gray);
+`;
+
+const Logo = styled.img`
+  cursor: pointer;
 `;
 
 const SearchBar = styled.div`
@@ -57,10 +62,11 @@ function Navigation() {
     <Container>
       <Wrapper>
         <BurgerMenu />
-        <img
+        <Logo
           src={"/assets/fd-logo.svg"}
           alt="Female Daily Company Logo"
           id="fd-logo"
+          onClick={() => window.open(HOST, "_self")}
         />
         <SearchBar>
           <SearchIcon />
