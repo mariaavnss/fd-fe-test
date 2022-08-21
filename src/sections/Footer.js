@@ -173,8 +173,8 @@ function Socmed() {
   return (
     <Socials>
       {SOCMED.map((social, index) => (
-        <a href={social.url}>
-          <img key={`socmed-${index}`} src={social.icon} alt={social.alt} />
+        <a href={social.url} key={`socmed-${index}`}>
+          <img src={social.icon} alt={social.alt} />
         </a>
       ))}
     </Socials>

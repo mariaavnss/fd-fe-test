@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 // import Carousel from "react-elastic-carousel";
 
-import { FD_REVIEWS } from "../utils/constants";
+import { FD_REVIEWS, API_URL } from "../utils/constants";
 
 import SectionHeader from "../components/SectionHeader";
 import Iframe from "../components/Iframe";
 import ReviewCard from "../components/ReviewCard";
+import { latestReview } from "../data/Data";
 
 const CardWrapper = styled.div`
   display: flex;
@@ -20,13 +21,31 @@ const Container = styled.div`
 `;
 
 // const breakPoints = [
-//   { width: 1, itemsToShow: 2 },
+//   { width: 2, itemsToShow: 2 },
 // ];
 
 function LatestReviews() {
+  const [latestReview_, setLatestReviewList] = useState([]);
+
+  useEffect(() => {
+    async function fetchLatestReviewList() {
+      try {
+        const requestUrl = API_URL;
+        const response = await fetch(requestUrl); //error cors 429
+        const responseJSON = await response.json();
+        // console.log(responseJSON);
+        setLatestReviewList(responseJSON["latest review"]);
+      } catch (err) {
+        console.log("###error###");
+        console.log(err);
+      }
+    }
+    fetchLatestReviewList();
+  });
+
   return (
     <Container>
-      <div style={{ width: "780px" }}>
+      <div style={{ minWidth: "900px" }}>
         <SectionHeader
           title={"Latest Reviews"}
           subtitle={"So you can make better purchase decision"}
@@ -34,29 +53,24 @@ function LatestReviews() {
           url={FD_REVIEWS}
         />
       </div>
-      {/* <div className="carousel-wrapper"> */}
-        {/* <Carousel breakPoints={breakPoints}> */}
-        <CardWrapper>
-        <ReviewCard
-            productImage={"https://static.femaledaily.com/dyn/480/images/prod-pics/product_1525323944_Tonymoly_D_800x800.jpg"}
-            productName={"Tony Moly"}
-            productDesc={"Delight Tony Tint"}
-            comment={"liptint pertamaku haha dengan harga yang affordable udah bisa membuat korean look di wajahku (ga cocok si haha), cairrr, mudah kering jadi"}
-            user={"atikaxr"}
-            profile={"Oily"}
-          />
+      {/* <div className="carousel-wrapper">
+      <Carousel breakPoints={breakPoints}> */}
+      <CardWrapper>
+        {latestReview.map((data, index) => (
           <ReviewCard
-            productImage={"https://static.femaledaily.com/dyn/480/images/prod-pics/product_1525323944_Tonymoly_D_800x800.jpg"}
-            productName={"Tony Moly"}
-            productDesc={"Delight Tony Tint"}
-            comment={"liptint pertamaku haha dengan harga yang affordable udah bisa membuat korean look di wajahku (ga cocok si haha), cairrr, mudah kering jadi"}
-            user={"atikaxr"}
-            profile={"Oily"}
+            key={`latest review-${index}`}
+            productImage={data.product.image}
+            productName={data.product.name}
+            productDesc={data.product.desc}
+            comment={data.comment}
+            user={data.user}
+            profile={data.profile[0] + ", " + data.profile[1] + ", "+ data.profile[2] + ", " + data.profile[3]}
           />
-          <Iframe adsIndex="MR 2" />
-        </CardWrapper>
-        {/* </Carousel> */}
-      {/* </div> */}
+        ))}
+        <Iframe adsIndex="MR 2" />
+      </CardWrapper>
+      {/* </Carousel>
+      </div> */}
     </Container>
   );
 }

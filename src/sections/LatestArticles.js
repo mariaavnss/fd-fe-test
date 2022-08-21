@@ -1,10 +1,11 @@
-import React from "react";
-import styled from "styled-components"
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
 
-import { FD_BLOG } from "../utils/constants";
+import { FD_BLOG, API_URL } from "../utils/constants";
 
 import SectionHeader from "../components/SectionHeader";
 import Article from "../components/Article";
+import { latestArticlesList } from "../data/Data";
 
 const Container = styled.div`
   padding: 0 150px;
@@ -16,9 +17,27 @@ const ArticlesWrapper = styled.div`
   gap: 40px;
   margin: 40px auto;
   justify-content: center;
-`
+`;
 
 function LatestArticles() {
+  const [latestArticlesList_, setLatestArticlesList] = useState([]);
+
+  useEffect(() => {
+    async function fetchLatestArticlesList() {
+      try {
+        const requestUrl = API_URL;
+        const response = await fetch(requestUrl); //error cors 429
+        const responseJSON = await response.json();
+        // console.log(responseJSON["latest articles"]);
+        setLatestArticlesList(responseJSON["latest articles"]);
+      } catch (err) {
+        console.log("###error###");
+        console.log(err);
+      }
+    }
+    fetchLatestArticlesList();
+  });
+
   return (
     <Container>
       <SectionHeader
@@ -28,44 +47,16 @@ function LatestArticles() {
         url={FD_BLOG}
       />
       <ArticlesWrapper>
-      <Article
-        image={"https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg"}
-        title={"Brush dan Alat Makeup Yang Paling Sering Digunakan"}
-        author={"celle"}
-        publishedAt={"4 hours ago"}
-      />
-      <Article
-        image={"https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg"}
-        title={"Brush dan Alat Makeup Yang Paling Sering Digunakan"}
-        author={"celle"}
-        publishedAt={"4 hours ago"}
-      />
-      <Article
-        image={"https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg"}
-        title={"Brush dan Alat Makeup Yang Paling Sering Digunakan"}
-        author={"celle"}
-        publishedAt={"4 hours ago"}
-      />
-      <Article
-        image={"https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg"}
-        title={"Brush dan Alat Makeup Yang Paling Sering Digunakan"}
-        author={"celle"}
-        publishedAt={"4 hours ago"}
-      />
-      <Article
-        image={"https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg"}
-        title={"Brush dan Alat Makeup Yang Paling Sering Digunakan"}
-        author={"celle"}
-        publishedAt={"4 hours ago"}
-      />
-      <Article
-        image={"https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg"}
-        title={"Brush dan Alat Makeup Yang Paling Sering Digunakan"}
-        author={"celle"}
-        publishedAt={"4 hours ago"}
-      />
+        {latestArticlesList.map((data, index) => (
+          <Article
+            key={`latest-article-${index}`}
+            image={data.image}
+            title={data.title}
+            author={data.author}
+            publishedAt={data.published_at}
+          />
+        ))}
       </ArticlesWrapper>
-      
     </Container>
   );
 }

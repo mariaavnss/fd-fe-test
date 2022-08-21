@@ -130,14 +130,14 @@ Cards.propTypes = {
   match: PropTypes.bool,
   byEditor: PropTypes.bool,
   line: PropTypes.bool,
-  editor: PropTypes.string,
-  role: PropTypes.string,
-  productImage: PropTypes.string,
+  editor: PropTypes.any,
+  role: PropTypes.any,
+  productImage: PropTypes.any,
   smallPhoto: PropTypes.bool,
   sectionType: PropTypes.string,
-  productRating: PropTypes.string,
-  productName: PropTypes.string,
-  productDescription: PropTypes.string,
+  productRating: PropTypes.any,
+  productName: PropTypes.any,
+  productDescription: PropTypes.any,
 };
 
 export default Cards;
