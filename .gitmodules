@@ -1,0 +1,3 @@
+[submodule "app/components"]
+	path = app/components
+	url = https://github.com/mariaavnss/components.git
