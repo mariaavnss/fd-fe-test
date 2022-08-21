@@ -1,14 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Styled from "styled-components";
+import styled from "styled-components";
 
-const Wrapper = Styled.a`
+const Wrapper = styled.a`
   cursor: pointer;
-  padding: 20px 30px;
   color: var(--white);
   background-color: var(--amaranth);
-  width: ${(props) => props.width + "px"};
-  height: ${(props) => props.height + "px"}
+  display: flex;
+  align-items: center;
 
   &:hover {
     color: var(--chinese-black);

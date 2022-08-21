@@ -1,14 +1,13 @@
 import React from "react";
-import Styled from "styled-components";
+import styled from "styled-components";
 
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 import { BrowserRouter } from "react-router-dom";
 
-const AppWrapper = Styled.div`
+const AppWrapper = styled.div`
   display: flex;
   min-height: 100%;
   flex-direction: column;

@@ -1,8 +1,9 @@
 import React from "react";
-
 import styled from "styled-components";
 import { Menu } from "@styled-icons/boxicons-regular/Menu";
 import { Search } from "@styled-icons/bootstrap/Search";
+
+import { HOST, FD_LOGIN_PAGE } from "../utils/constants";
 
 import Button from "../components/Button";
 
@@ -15,16 +16,28 @@ const SearchIcon = styled(Search)`
   color: var(--spanish-gray);
 `;
 
+const Logo = styled.img`
+  cursor: pointer;
+`;
+
 const SearchBar = styled.div`
   width: 945px;
   height: 39px;
   border: 1px solid var(--chinese-silver);
-
   display: flex;
   gap: 10px;
   line-height: 22px;
   font-size: 22px;
   padding: 10px;
+  display: flex;
+  align-items: center;
+`;
+
+const Copy = styled.div`
+  margin: 0 13px;
+  display: flex;
+  gap: 5px;
+  min-width: 164px;
 `;
 
 const Wrapper = styled.div`
@@ -49,19 +62,24 @@ function Navigation() {
     <Container>
       <Wrapper>
         <BurgerMenu />
-        <img
+        <Logo
           src={"/assets/fd-logo.svg"}
           alt="Female Daily Company Logo"
           id="fd-logo"
+          onClick={() => window.open(HOST, "_self")}
         />
         <SearchBar>
           <SearchIcon />
           <p>{"Search products, articles, topics, brands, etc"}</p>
         </SearchBar>
       </Wrapper>
-      <Button onClick={() => window.open("https://account.femaledaily.com/")}>
-        <img src={"/assets/user-icon.png"} alt="User Login Icon" />
-        {"LOGIN / SIGNUP"}
+      <Button
+        onClick={() => window.open(FD_LOGIN_PAGE, "_self")}
+      >
+        <Copy>
+          <img src={"/assets/user-icon.png"} alt="User Login Icon" />
+          {"LOGIN / SIGNUP"}
+        </Copy>
       </Button>
     </Container>
   );
