@@ -4,6 +4,7 @@ export const FD_BLOG = 'https://editorial.femaledaily.com/';
 export const FD_REVIEWS = 'https://reviews.femaledaily.com/';
 export const FD_FORUM = 'https://talk.femaledaily.com/';
 export const FD_B2B = 'https://studio.femaledaily.com/brands';
+export const FD_VIDEO_BLOG = 'https://editorial.femaledaily.com/blog/category/video-blog';
 
 // dummy
 export const FD_MATCH = 'https://reviews.femaledaily.com/brands/skin-game?tab=products&cat_slugs=&cat_id=&order=popular&page=1#:~:text=PRODUCT-,MATCHES,-ADD%20REVIEW';
