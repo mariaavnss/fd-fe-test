@@ -41,3 +41,4 @@ I watched [Deploy React App to Netlify 2022](https://www.youtube.com/watch?v=OPa
 - Implement git submodule
 - Search bar
 - Try deploy with Heroku
+- Fix potential security vulnerabilities in dependencies
