@@ -3,6 +3,12 @@ The hosted app here: https://femaledaily-test.netlify.app/
 
 ## Set up
 ```
+# Set up git-submodule
+$ cd src/components
+$ git submodule update --init
+$ git checkout master
+$ cd ../..
+
 # Install Dependencies
 $ yarn install
 
