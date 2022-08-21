@@ -36,8 +36,7 @@ Color naming references: https://www.color-name.com/
 My answer for the test obviously still far from perfect. Unfortunately, I didn't pass all the plus points, and you might find some warnings and error in the console, because:
 - `CORS 429`, so I use an alternative
 - Some extensions, such as adblocker might cause some errors. Because it'll block the ads from my embedded youtube
-
-Also, all the `console.log()` I commented there are necessary, because: it shows that the API call is working. Other comments and unused variables are also necessary because it shows my almost-true work.
+Also, all the `//comments` are necessary, because: because it shows my almost-true work.
 
 ## Need to be Improve
 - Fix [CORS 429](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe)
@@ -48,4 +47,3 @@ Also, all the `console.log()` I commented there are necessary, because: it shows
 - API with redux
 - Implement git submodule
 - Search bar (Not only UI)
-- Deployment with Heroku
