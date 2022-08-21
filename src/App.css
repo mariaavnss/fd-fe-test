@@ -24,3 +24,30 @@ p {
 a {
   text-decoration: none !important;
 }
+
+/* for react-elastic-carousel */
+button.rec-dot{
+  background-color: #FDDAE0;
+  box-shadow: none;
+}
+
+button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
+  background-color: #DC294F;
+  box-shadow: none;
+}
+
+.rec.rec-arrow{
+  display: none;
+}
+
+.rec-swipable {
+  gap: 20px;
+}
+
+.carousel, .rec-carousel-item, .rec-carousel-item-visible  {
+  width: 380px;
+}
+
+.rec-carousel-wrapper {
+ width: 200px;
+}
