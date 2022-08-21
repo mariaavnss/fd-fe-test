@@ -11,7 +11,7 @@ const CardWrapper = styled.div`
 
 const Container = styled.div`
   padding: 0 150px;
-`
+`;
 
 function EditorChoice() {
   return (
@@ -22,7 +22,10 @@ function EditorChoice() {
         seeMore={false}
       />
       <CardWrapper>
-        <Cards 
+        <Cards
+          match={false}
+          byEditor={true}
+          line={true}
           editor="annedean"
           role="Associate Editor"
           productImage="https://static.femaledaily.com/dyn/640/images/prod-pics/product_1558000129_YOU_MAKEUP_800x800.png"
@@ -31,7 +34,10 @@ function EditorChoice() {
           productRating="4.1"
           productDescription="Rouge Velvet Matte Lip Cream"
         />
-        <Cards 
+        <Cards
+          match={false}
+          byEditor={true}
+          line={true}
           editor="annedean"
           role="Associate Editor"
           productImage="https://static.femaledaily.com/dyn/640/images/prod-pics/product_1558000129_YOU_MAKEUP_800x800.png"
@@ -40,7 +46,10 @@ function EditorChoice() {
           productRating="4.1"
           productDescription="Rouge Velvet Matte Lip Cream"
         />
-        <Cards 
+        <Cards
+          match={false}
+          byEditor={true}
+          line={true}
           editor="annedean"
           role="Associate Editor"
           productImage="https://static.femaledaily.com/dyn/640/images/prod-pics/product_1558000129_YOU_MAKEUP_800x800.png"
@@ -49,7 +58,10 @@ function EditorChoice() {
           productRating="4.1"
           productDescription="Rouge Velvet Matte Lip Cream"
         />
-        <Cards 
+        <Cards
+          match={false}
+          byEditor={true}
+          line={true}
           editor="annedean"
           role="Associate Editor"
           productImage="https://static.femaledaily.com/dyn/640/images/prod-pics/product_1558000129_YOU_MAKEUP_800x800.png"
@@ -58,7 +70,10 @@ function EditorChoice() {
           productRating="4.1"
           productDescription="Rouge Velvet Matte Lip Cream"
         />
-        <Cards 
+        <Cards
+          match={false}
+          byEditor={true}
+          line={true}
           editor="annedean"
           role="Associate Editor"
           productImage="https://static.femaledaily.com/dyn/640/images/prod-pics/product_1558000129_YOU_MAKEUP_800x800.png"

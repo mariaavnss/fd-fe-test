@@ -20,7 +20,7 @@ import Footer from "./sections/Footer";
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
 `;
 
 function App() {

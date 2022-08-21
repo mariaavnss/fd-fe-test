@@ -26,8 +26,7 @@ const SearchBar = styled.div`
   border: 1px solid var(--chinese-silver);
   display: flex;
   gap: 10px;
-  line-height: 22px;
-  font-size: 22px;
+  font-size: 16px;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -55,6 +54,7 @@ const Container = styled.div`
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
+  z-index: 2;
 `;
 
 function Navigation() {
@@ -75,6 +75,7 @@ function Navigation() {
       </Wrapper>
       <Button
         onClick={() => window.open(FD_LOGIN_PAGE, "_self")}
+        rounded={false}
       >
         <Copy>
           <img src={"/assets/user-icon.png"} alt="User Login Icon" />
