@@ -6,7 +6,6 @@ const Wrapper = styled.a`
   cursor: pointer;
   color: var(--white);
   background-color: var(--amaranth);
-  margin: 0 auto;
   display: flex;
   align-items: center;
 

@@ -7,7 +7,6 @@ import SeeMore from "../components/SeeMore";
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0 150px;
 `
 
 function SectionHeader({seeMore, title, subtitle, url}) {

@@ -56,6 +56,7 @@ const Container = styled.div`
   border-bottom: 1px solid var(--chinese-silver);
   padding: 10px 20px;
   background-color: var(--white);
+  margin-bottom: 15px;
 `;
 
 function MenuNav() {
