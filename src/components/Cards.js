@@ -8,11 +8,13 @@ const Container = styled.div`
   display: inline-block;
   margin: 0 auto;
   background-color: var(--white);
+  border-radius: 15px;
 `;
 
 const EditorWrapper = styled.div`
   display: flex;
   position: relative;
+	margin-top: 50px;
 `;
 
 const EditorPhoto = styled.img`
@@ -33,9 +35,7 @@ const Editor = styled.div`
 
 const ProductWrapper = styled.div`
   border: ${(props) =>
-    props.sectionType === "trending this week"
-      ? "none"
-      : "1px solid var(--chinese-silver)"};
+    props.line ? "1px solid var(--chinese-silver)" : "none"};
   border-radius: 15px;
   padding: 10px;
   display: flex;
@@ -50,20 +50,28 @@ const ProductWrapper = styled.div`
 const Photo = styled.img`
   border-radius: 50%;
   width: 150px;
+	margin: 10px;
 `;
 
 const Description = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  margin-bottom: 10px;
+  max-width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: black;
 `;
 
 const Rating = styled.div`
   display: flex;
   gap: 5px;
+  margin: 10px 0;
 `;
 
 function Cards({
+  match,
+  byEditor,
+  line,
   editor,
   role,
   productImage,
@@ -74,7 +82,7 @@ function Cards({
 }) {
   return (
     <Container>
-      {sectionType === "editor's choice" && (
+      {byEditor && (
         <EditorWrapper>
           <EditorPhoto
             src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=761&q=80"
@@ -88,18 +96,19 @@ function Cards({
           </Editor>
         </EditorWrapper>
       )}
-      <ProductWrapper>
+      <ProductWrapper line={line}>
         <Photo src={productImage} alt={productName} />
         <Description>
-          {sectionType === "see my matches" && (
+          {match && (
             <b style={{ color: "var(--amaranth)" }}>{"Match Skin Type"}</b>
           )}
           <Rating>
-            <b>{"4.1"}</b>
+            <b>{productRating}</b>
             <Star type={sectionType} />
-            <span>{productRating}</span>
+            <span>{"(7)"}</span>
           </Rating>
           <b>{productName}</b>
+          <br /><br />
           <span>{productDescription}</span>
         </Description>
       </ProductWrapper>
@@ -108,6 +117,9 @@ function Cards({
 }
 
 Cards.propTypes = {
+  match: PropTypes.bool,
+  byEditor: PropTypes.bool,
+  line: PropTypes.bool,
   editor: PropTypes.string,
   role: PropTypes.string,
   productImage: PropTypes.string,
