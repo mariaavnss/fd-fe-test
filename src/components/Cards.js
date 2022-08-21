@@ -35,9 +35,9 @@ const Editor = styled.div`
 
 const ProductWrapper = styled.div`
   border: ${(props) =>
-    props.line ? "1px solid var(--chinese-silver)" : "none"};
+    props.line ? "1px solid var(--chinese-silver)" : "1px solid var(--white)"};
   border-radius: 15px;
-  padding: 10px;
+  padding: ${(props) => props.smallPhoto? "5px" : "10px"};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,18 +49,28 @@ const ProductWrapper = styled.div`
 
 const Photo = styled.img`
   border-radius: 50%;
-  width: 150px;
+  width: ${(props) => props.smallPhoto? "100px" : "150px"};
 	margin: 10px;
 `;
 
 const Description = styled.div`
   margin-bottom: 10px;
-  max-width: 200px;
+`;
+
+const TitleWrap = styled.div`
+  width: 180px;
+  overflow: hidden;
+  white-space: wrap;
+  font-weight: bolder;
+`
+
+const DescWrap = styled.p`
+  color: var(--chinese-black);
+  width: 150px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  color: black;
-`;
+`
 
 const Rating = styled.div`
   display: flex;
@@ -75,6 +85,7 @@ function Cards({
   editor,
   role,
   productImage,
+  smallPhoto,
   productName,
   sectionType,
   productRating,
@@ -96,8 +107,8 @@ function Cards({
           </Editor>
         </EditorWrapper>
       )}
-      <ProductWrapper line={line}>
-        <Photo src={productImage} alt={productName} />
+      <ProductWrapper line={line} smallPhoto={smallPhoto}>
+        <Photo src={productImage} alt={productName} smallPhoto={smallPhoto}/>
         <Description>
           {match && (
             <b style={{ color: "var(--amaranth)" }}>{"Match Skin Type"}</b>
@@ -107,9 +118,8 @@ function Cards({
             <Star type={sectionType} />
             <span>{"(7)"}</span>
           </Rating>
-          <b>{productName}</b>
-          <br /><br />
-          <span>{productDescription}</span>
+          <TitleWrap>{productName}</TitleWrap>
+          <DescWrap>{productDescription}</DescWrap>
         </Description>
       </ProductWrapper>
     </Container>
@@ -123,6 +133,7 @@ Cards.propTypes = {
   editor: PropTypes.string,
   role: PropTypes.string,
   productImage: PropTypes.string,
+  smallPhoto: PropTypes.bool,
   sectionType: PropTypes.string,
   productRating: PropTypes.string,
   productName: PropTypes.string,

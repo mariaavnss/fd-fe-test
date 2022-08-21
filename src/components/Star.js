@@ -38,6 +38,8 @@ function Star({ type }) {
       return <FourStar />;
     case "see my matches":
       return <FourStar />;
+    case "trending this week":
+      return <FourStar />
     case "latest review":
       return <ThreeStar />;
     default:

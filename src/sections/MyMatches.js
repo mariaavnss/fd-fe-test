@@ -6,7 +6,6 @@ import { FD_MATCH } from "../utils/constants";
 import Button from "../components/Button";
 import Cards from "../components/Cards";
 
-
 const Container = styled.div`
   background-color: var(--pale-pink);
   height: 405px;
