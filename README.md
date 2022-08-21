@@ -29,10 +29,8 @@ Color naming references: https://www.color-name.com/
 
 ## Stacks
 - This website originally designed by [Female Daily Network's FE](https://ibb.co/nByzdVt) 
-- The first iteration of this app build with React.js (pure) leveraging [styled-components](https://github.com/styled-components/styled-components).
-
-## Deploy on Netlify
-I watched [Deploy React App to Netlify 2022](https://www.youtube.com/watch?v=OPalwvWO63U) by Sanskar Tiwari on Youtube
+- The first iteration of this app build with React.js (pure) leveraging [styled-components](https://github.com/styled-components/styled-components)
+- Deloyed with Netlify
 
 ## Disclaimer
 My answer for the test obviously still far from perfect. Unfortunately, I didn't pass all the plus points, and you might find some warnings and error in the console, because:
