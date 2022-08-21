@@ -10,7 +10,7 @@ $ yarn install
 $ yarn run start
 
 # Build for production and launch server
-$ yarn build
+$ npm run build
 ```
 
 ## 🎨 Color Codes
