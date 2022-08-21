@@ -18,23 +18,23 @@ const Container = styled.div`
 `;
 
 function EditorChoice() {
-  const [editorChoiceList_, setEditorChoiceList] = useState([]);
+  // const [editorChoiceList_, setEditorChoiceList] = useState([]);
 
-  useEffect(() => {
-    async function fetchEditorChoiceList() {
-      try {
-        const requestUrl = API_URL;
-        const response = await fetch(requestUrl); //error cors 429
-        const responseJSON = await response.json();
-        //console.log(responseJSON["editor's choice"]);
-        setEditorChoiceList(responseJSON["editor's choice"]);
-      } catch (err) {
-        console.log("###error###");
-        console.log(err);
-      }
-    }
-    fetchEditorChoiceList();
-  });
+  // useEffect(() => {
+  //   async function fetchEditorChoiceList() {
+  //     try {
+  //       const requestUrl = API_URL;
+  //       const response = await fetch(requestUrl); //error cors 429
+  //       const responseJSON = await response.json();
+  //       //console.log(responseJSON["editor's choice"]);
+  //       setEditorChoiceList(responseJSON["editor's choice"]);
+  //     } catch (err) {
+  //       console.log("###error###");
+  //       console.log(err);
+  //     }
+  //   }
+  //   fetchEditorChoiceList();
+  // });
 
   return (
     <Container>
