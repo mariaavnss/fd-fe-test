@@ -37,7 +37,6 @@ function App() {
           <Iframe adsIndex="Horizontal" />
           <LatestArticles />
           <LatestReviews />
-          <Iframe adsIndex="MR 2" />
           <PopularGroups />
           <LatestVideos />
           <TrendingThisWeek />

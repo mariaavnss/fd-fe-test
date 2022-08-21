@@ -1,14 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const StarIcon = styled.img`
+  width: 20px;
+  margin-top: -2px;
+`
+
 
 function FourStar() {
   return (
     <div>
-      <img src="/assets/star-icon-on.png" alt="Red Star Icon" />
-      <img src="/assets/star-icon-on.png" alt="Red Star Icon" />
-      <img src="/assets/star-icon-on.png" alt="Red Star Icon" />
-      <img src="/assets/star-icon-on.png" alt="Red Star Icon" />
-      <img src="/assets/star-icon-off.png" alt="Gray Star Icon" />
+      <StarIcon src="/assets/star-icon-on.png" alt="Red Star Icon" />
+      <StarIcon src="/assets/star-icon-on.png" alt="Red Star Icon" />
+      <StarIcon src="/assets/star-icon-on.png" alt="Red Star Icon" />
+      <StarIcon src="/assets/star-icon-on.png" alt="Red Star Icon" />
+      <StarIcon src="/assets/star-icon-off.png" alt="Gray Star Icon" />
     </div>
   );
 }
@@ -16,11 +23,11 @@ function FourStar() {
 function ThreeStar() {
   return (
     <div>
-      <img src="/assets/star-icon-on.png" alt="Red Star Icon" />
-      <img src="/assets/star-icon-on.png" alt="Red Star Icon" />
-      <img src="/assets/star-icon-on.png" alt="Red Star Icon" />
-      <img src="/assets/star-icon-off.png" alt="Grey Star Icon" />
-      <img src="/assets/star-icon-off.png" alt="Grey Star Icon" />
+      <StarIcon src="/assets/star-icon-on.png" alt="Red Star Icon" />
+      <StarIcon src="/assets/star-icon-on.png" alt="Red Star Icon" />
+      <StarIcon src="/assets/star-icon-on.png" alt="Red Star Icon" />
+      <StarIcon src="/assets/star-icon-off.png" alt="Grey Star Icon" />
+      <StarIcon src="/assets/star-icon-off.png" alt="Grey Star Icon" />
     </div>
   );
 }
