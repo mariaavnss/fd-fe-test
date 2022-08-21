@@ -42,7 +42,6 @@ function App() {
           <TrendingThisWeek />
           <TopBrands />
           <Footer />
-          <Iframe adsIndex="Bottom Frame" />
         </Wrapper>
       </div>
     </div>

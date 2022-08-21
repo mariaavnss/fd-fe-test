@@ -51,8 +51,6 @@ const Container = styled.div`
   justify-content: space-between;
   border-bottom: 1px solid var(--chinese-silver);
   background-color: var(--white);
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
   top: 0;
   z-index: 2;
 `;
