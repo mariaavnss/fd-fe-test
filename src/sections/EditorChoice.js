@@ -7,6 +7,7 @@ import Cards from "../components/Cards";
 const CardWrapper = styled.div`
   display: flex;
   gap: 10px;
+  margin: 0 auto 40px;
 `;
 
 const Container = styled.div`

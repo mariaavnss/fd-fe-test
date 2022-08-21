@@ -18,7 +18,7 @@ const Small = styled.div`
 const EmbededVideo = styled.div`
   display: flex;
   gap: 30px;
-  margin-top: 30px;
+  margin: 40px auto;
   justify-content: center;
 `;
 

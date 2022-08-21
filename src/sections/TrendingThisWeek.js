@@ -4,16 +4,6 @@ import styled from "styled-components";
 import SectionHeader from "../components/SectionHeader";
 import Cards from "../components/Cards";
 
-const Container = styled.div`
-  padding: 0 150px;
-`;
-
-const CardWrapper = styled.div`
-  display: flex;
-  gap: 10px;
-  margin: 40px auto;
-`;
-
 const PRODUCT_ITEMS = [
   {
     img: "../assets/product-1.png",
@@ -46,6 +36,16 @@ const PRODUCT_ITEMS = [
     desc: "Phyto-pigments Flawless Serum",
   },
 ];
+
+const Container = styled.div`
+  padding: 0 150px;
+`;
+
+const CardWrapper = styled.div`
+  display: flex;
+  gap: 10px;
+  margin: 40px auto;
+`;
 
 function TrendingThisWeek() {
   return (
