@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 
-import { FD_BLOG, API_URL } from "../utils/constants";
+import { FD_BLOG } from "../utils/constants";
 
 import SectionHeader from "../components/SectionHeader";
 import Article from "../components/Article";

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 // import Carousel from "react-elastic-carousel";
 
-import { FD_REVIEWS, API_URL } from "../utils/constants";
+import { FD_REVIEWS } from "../utils/constants";
 
 import SectionHeader from "../components/SectionHeader";
 import Iframe from "../components/Iframe";

@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
-
-import { API_URL } from "../utils/constants";
 
 import SectionHeader from "../components/SectionHeader";
 import Cards from "../components/Cards";
