@@ -53,13 +53,13 @@ const LogoWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 100px;
-  margin: 40px auto;
+  margin: 40px auto 70px;
 `;
 
 const Logo = styled.img`
-  height: ${props=> props.height + "px"};
-  width: ${props=> props.width + "px"};
-`
+  height: ${(props) => props.height + "px"};
+  width: ${(props) => props.width + "px"};
+`;
 
 function TopBrands() {
   return (
@@ -81,6 +81,19 @@ function TopBrands() {
           />
         ))}
       </LogoWrapper>
+
+      <div>
+        <h1 style={{ fontSize: "24px" }}>
+          {
+            "Female Daily - Find everything you want to know about beauty on Female Daily"
+          }
+        </h1>
+        <p style={{ color: "var(--chinese-black)", fontSize: "20px" }}>
+          {
+            "Product Reviews, Tips & Tricks, Expert, and Consumer Opinions, Beauty Tutorials, Discussions, Beauty Workshops, anything! We are here to be your friendly solution to all things beauty, inside and out!"
+          }
+        </p>
+      </div>
     </Container>
   );
 }
