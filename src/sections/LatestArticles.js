@@ -20,23 +20,23 @@ const ArticlesWrapper = styled.div`
 `;
 
 function LatestArticles() {
-  const [latestArticlesList_, setLatestArticlesList] = useState([]);
+  // const [latestArticlesList_, setLatestArticlesList] = useState([]);
 
-  useEffect(() => {
-    async function fetchLatestArticlesList() {
-      try {
-        const requestUrl = API_URL;
-        const response = await fetch(requestUrl); //error cors 429
-        const responseJSON = await response.json();
-        // console.log(responseJSON["latest articles"]);
-        setLatestArticlesList(responseJSON["latest articles"]);
-      } catch (err) {
-        console.log("###error###");
-        console.log(err);
-      }
-    }
-    fetchLatestArticlesList();
-  });
+  // useEffect(() => {
+  //   async function fetchLatestArticlesList() {
+  //     try {
+  //       const requestUrl = API_URL;
+  //       const response = await fetch(requestUrl); //error cors 429
+  //       const responseJSON = await response.json();
+  //       // console.log(responseJSON["latest articles"]);
+  //       setLatestArticlesList(responseJSON["latest articles"]);
+  //     } catch (err) {
+  //       console.log("###error###");
+  //       console.log(err);
+  //     }
+  //   }
+  //   fetchLatestArticlesList();
+  // });
 
   return (
     <Container>

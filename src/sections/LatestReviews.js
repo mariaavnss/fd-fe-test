@@ -25,23 +25,22 @@ const Container = styled.div`
 // ];
 
 function LatestReviews() {
-  const [latestReview_, setLatestReviewList] = useState([]);
+  // const [latestReview_, setLatestReviewList] = useState([]);
 
-  useEffect(() => {
-    async function fetchLatestReviewList() {
-      try {
-        const requestUrl = API_URL;
-        const response = await fetch(requestUrl); //error cors 429
-        const responseJSON = await response.json();
-        // console.log(responseJSON);
-        setLatestReviewList(responseJSON["latest review"]);
-      } catch (err) {
-        console.log("###error###");
-        console.log(err);
-      }
-    }
-    fetchLatestReviewList();
-  });
+  // useEffect(() => {
+  //   async function fetchLatestReviewList() {
+  //     try {
+  //       const requestUrl = API_URL;
+  //       const response = await fetch(requestUrl); //error cors 429
+  //       const responseJSON = await response.json();
+  //       setLatestReviewList(responseJSON["latest review"]);
+  //     } catch (err) {
+  //       console.log("###error###");
+  //       console.log(err);
+  //     }
+  //   }
+  //   fetchLatestReviewList();
+  // });
 
   return (
     <Container>
