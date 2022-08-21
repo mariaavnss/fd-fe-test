@@ -36,11 +36,11 @@ Color naming references: https://www.color-name.com/
 ## What's in here
 - A website that originally designed by [Female Daily Network's FE](https://ibb.co/nByzdVt) 
 - The first iteration of this app built with React.js (pure) leveraging [styled-components](https://github.com/styled-components/styled-components)
-- Implement [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+- Implement [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) for the (components)[https://github.com/mariaavnss/components] 
 - Deployed with Netlify
 
 ## Disclaimer
-My answer for the test obviously still far from perfect. Unfortunately, I didn't pass all the plus points, and you might find some warnings and error in the console, because:
+My answer for the test obviously still far from perfect. I might didn't pass all the plus points, and you might find some warnings and error in the console, because:
 - `CORS 429`, so I use an alternative
 - Some extensions, such as adblocker might cause some errors. Because it'll block the ads from my embedded youtube
 Also, all the `//comments` are necessary, because: because it shows my almost-true work.
