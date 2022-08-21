@@ -32,7 +32,7 @@ function App() {
         <Wrapper>
           <Iframe adsIndex="Top Frame" />
           <Iframe adsIndex="Billboard" />
-          <EditorChoice />
+          <EditorChoice/>
           <MyMatches />
           <Iframe adsIndex="Horizontal" />
           <LatestArticles />

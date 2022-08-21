@@ -34,11 +34,20 @@ Color naming references: https://www.color-name.com/
 ## Deploy on Netlify
 I watched [Deploy React App to Netlify 2022](https://www.youtube.com/watch?v=OPalwvWO63U) by Sanskar Tiwari on Youtube
 
+## Disclaimer
+My answer for the test obviously still far from perfect. Unfortunately, I didn't pass all the plus points, and you might find some warnings and error in the console, because:
+- `CORS 429`, so I use an alternative
+- Some extensions, such as adblocker might cause some errors. Because it'll block the ads from my embedded youtube
+
+Also, all the `console.log()` I commented there are necessary, because: it shows that the API call is working. Other comments and unused variables are also necessary because it shows my almost-true work.
+
 ## Need to be Improve
+- Fix [CORS 429](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe)
+- Potential security vulnerabilities in project's dependencies
+- Alternative Iframe to embed Youtube
+- Fix [carousel](https://sag1v.github.io/react-elastic-carousel/styling)'s UI bug
 - Unit testing
-- Dynamic data from API
-- Fix carousel's UI bug
+- API with redux
 - Implement git submodule
-- Search bar
-- Try deploy with Heroku
-- Fix potential security vulnerabilities in dependencies
+- Search bar (Not only UI)
+- Deployment with Heroku

@@ -39,7 +39,7 @@ const User = styled.div`
   gap: 5px;
   align-items: center;
   position: absolute;
-  left: 135px;
+  left: 45px;
   bottom: -80px;
 `;
 
