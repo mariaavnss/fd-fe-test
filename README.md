@@ -33,10 +33,11 @@ Color naming references: https://www.color-name.com/
 | Chinese Silver    | `#CACACA` |
 | Chinese Black     | `#161616` |
 
-## Stacks
-- This website originally designed by [Female Daily Network's FE](https://ibb.co/nByzdVt) 
-- The first iteration of this app build with React.js (pure) leveraging [styled-components](https://github.com/styled-components/styled-components)
-- Deloyed with Netlify
+## What's in here
+- A website that originally designed by [Female Daily Network's FE](https://ibb.co/nByzdVt) 
+- The first iteration of this app built with React.js (pure) leveraging [styled-components](https://github.com/styled-components/styled-components)
+- Implement [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+- Deployed with Netlify
 
 ## Disclaimer
 My answer for the test obviously still far from perfect. Unfortunately, I didn't pass all the plus points, and you might find some warnings and error in the console, because:
@@ -51,5 +52,4 @@ Also, all the `//comments` are necessary, because: because it shows my almost-tr
 - Fix [carousel](https://sag1v.github.io/react-elastic-carousel/styling)'s UI bug
 - Unit testing
 - API with redux
-- Implement git submodule
 - Search bar (Not only UI)
