@@ -11,6 +11,7 @@ const Container = styled.div`
 `;
 const CardWrapper = styled.div`
   display: flex;
+  justify-content: center;
   gap: 30px;
   margin-top: 30px;
 `;
