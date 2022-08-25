@@ -1,4 +1,3 @@
-# Portfolio of Maria Vanessa Salim
 The hosted app here: https://femaledaily-test.netlify.app/
 
 ## Set up
